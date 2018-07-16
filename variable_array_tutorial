@@ -1,0 +1,156 @@
+/* Tutorial: Javascript Types & Variables
+
+Directions: 
+1. Open up repl.it - repl.it is an online text editor and interpreter for your code.
+2. Look for “Search for a language” bar, and type in Javascript. Once you see it, click on it or press ‘enter’.
+3. You should see two split screen. On the left is the text editor where you can write code like another other editor. 4. On the right, you have a console that runs your code live. Copy and paste all of the text within this file in the editor to the left. 
+5. Go through this tutorial and test all of your code and answers in the console on the right.
+
+
+Great! Let’s take a look at some Javascript basics. We are going to start by talking about variables in computer science and basic data types in Javascript. */
+ 
+ 
+/* Strings and Variables.
+ 
+Take a look at the line below.*/
+
+‘Hello world!’
+Notice that 'Hello world!' is surrounded by quotes. That means it's a string, which is a just sequence of characters. A string is something we use to represent text in our code. This is the same thing as the text within your favorite book or the text on this very screen. 
+
+In Javascript, we can represent strings with either double quotes " " or single quotes ' '—it doesn't matter which.
+Let's store 'Hello world!' by assigning it to the variable we call hi. Now hi's value is the string "Hello world!". */
+
+var hi = ‘Hello world!’ 
+
+
+Variables are names for values. In Javascript, the = symbol assigns the value on the right to the name on the left. To create a variable, we must use the var keyword before typing the name of the variable. This tells Javascript that what we are making a new variable. The variable is created when a value is assigned to it. 
+Note: Variable names cannot start with a digit and cannot contain spaces or most punctuation (except underscores _ ).
+To see the value of hi, we can print it:								     */
+
+console.log(hi);
+
+
+/*STOP: Write down what you think will be printed to the console before you move on. 
+
+>>> Mini-Exercise: Look at the code below. Write down what you think would be printed on the screen after running the code. */
+
+var greeting = “Hello CS2!”
+console.log(“greeting”);
+console.log(greeting);
+
+/* Notice the difference between a string and a variable. In Javascript, the string “greeting” is simply the word in text. Thus, if we ask Javascript to print “greeting”, that exact word is what we see on the screen. On the other hand, the variable greeting is a name we use to reference some specific thing - the thing stored inside it. Thus, if we ask Javascript to print the variable, Javascript will print out what’s stored inside of that variable - “Hello CS2!”. A variable in computer science is very similar to a variable in math. In both cases, they act as containers to store certain values. 
+
+>>> Mini-Exercise: Add lines to the code below to swap the initial values of dog and cat, so that dog = 'meow' and cat = 'woof'. Then check the value of cat and dog using console.log(). */
+
+var dog = ‘woof’;
+var cat = ‘meow’;
+// hint: what happens if we do cat = dog?
+// hint: you may have to also create a temporary variable storing a value.
+
+
+/*
+>>> Mini-Exercise: Javascript as a Calculator - Let’s do a bit of math! Below, we have a bunch of mathematical operations. Some are quite obvious, while some are not so obvious. Type each one in the Javascript console and check out what they do! */
+
+5.5+6
+
+2-4
+
+4*2
+
+4**2
+
+Math.pow(4, 2);
+
+8/4
+
+
+/* Basic Javascript Data Types.
+
+In addition strings, we are able to use variables to store numbers! A number is another data type in Javascript. A data type is used to distinguish the type of value something is. Ex. 6 is a number, while “hello!” is a string. Data types are important because whenever we store a value within a variable, we want to know the type of value it holds. If a variable holds the number 6, the data type of that variable is a number. Data types also allow us to know what we can and cannot do with a variable. */
+
+var length = 6
+var width = 9; 
+var area = length*width;
+console.log(area);
+
+/*STOP: What is the data type of the variable area and write down what you think will be printed to the console before you move on.
+
+Note: Javascript performs any computation on the right-hand side of the assignment (=) statement before it assigns the value to the variable. Thus, in the example above, Javascript computes length*width before storing the value in the variable area. area stores a number; thus its data type is a number.*/
+
+
+/* Arrays
+
+Variables with a single string or a single number are useful, but what if we want to group a bunch of values together? Let’s say, instead of storing a single number, I want to store a bunch of numbers somewhere. To do this, we’ll need to use an array. An array is a list or a sequence of items. We use square brackets to create these lists. 
+
+var newList = []		// Empty List here.
+
+Arrays have a set order. Like strings, each element in a list has an index, starting with 0. So a list n elements long would have elements from left to right with indices 0, 1, 2, ... , n-1.
+We access the value of an element at its index i using this notation: listName[index], shown below:
+
+var myNumbers = [84, 90, 100];
+myNumbers[1]
+
+/*STOP: Write down which number in the array will be selected before you move on. Type the code into the console to check your answer.
+
+We can reassign a value at an index using the same notation. Here we change the value at index 1, which is 90, to the string 'zoom'.
+
+var myNumbers = [84, 90, 100];
+myNumbers[1] = ‘zoom’;
+myNumbers 
+
+/*STOP: Write down what the list looks like now before you move on. Type the code into the console to check your answer.
+
+>>> Mini-Exercise: Change the last item in the list below to be the name of your favorite food without creating another list. Then print that last item using console.log() */
+
+var moo = [85, 23, 22, 100, 9];
+
+
+/* More on Arrays.
+
+An array can contain different kinds of data types. This array contains a string, a number, another array, and null, which is a predefined constant representing the absence of value.
+
+var needs = [“rest”, 16, [“food”, “water”, “shelter”], null];
+
+/*STOP: What is stored in the 2nd to last item in the array? What happens if I run -- console.log(needs[2]);   -- in Javascript. Run the code in the console to check your answer.
+
+
+/* Methods - Strings.
+
+Let’s talk a little more about strings. In Javascript, we can change strings, combine strings, and edit strings on the spot by using methods. There are many built-in methods in Javascript for strings. [Here’s the documentation on built-in string methods: https://www.w3schools.com/jsref/jsref_obj_string.asp]. These methods are blocks of code specifically written to use with strings, and we access them using a special notation, called dot notation. This just means we do this: variableName.methodName()
+
+If we want to change the characters of a string to be capitalized, we can use the method toUpperCase() as such:
+
+'hi'.toUpperCase();
+
+/*STOP: Write down what gets printed to the console with the above code before you move on. Check your answers by typing in the code in the Javascript console. 
+
+
+We can also check out how many characters are in a string by using a property -  .length         */
+
+‘hi’.length;
+
+/*STOP: Write down what gets printed to the console with the above code before you move on. Check your answers by typing in the code in the Javascript console.
+
+ 
+/* Methods - Arrays.
+Just like strings, there are also methods for arrays that allows us to change and manipulate them. For a list of array methods, check out - https://www.w3schools.com/Jsref/jsref_obj_array.asp. We use this methods using dot notation by doing this: listName.methodName()
+
+Let’s create a list of groceries and use methods to add to our list. We’ll use the following method: push().*/
+ 
+var groceries = [“apples”, “chicken”];
+groceries.push(“noodles”);
+groceries
+ 
+/*STOP: Write down what you think will be printed to the console before you move on. Then check your answer.
+ 
+We can add to our grocery list by using the push()method. The item you want to add to the list gets put inside the parenthesis. 
+ 
+>>> Mini-Exercise: Using the same list from above, let’s add “beans” and “rice” to the list.
+ 
+Just like strings, we can check how many items are in an array by using - .length
+ 
+var numbers = [3, 5, 6];
+numbers.length;
+
+/*STOP: Write down what gets printed to the console with the above code before you move on. Check your answers by typing in the code in the Javascript console. */
+
