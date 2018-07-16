@@ -15,7 +15,9 @@ Great! Let’s take a look at some Javascript basics. We are going to start by t
 Take a look at the line below.*/
 
 ‘Hello world!’
-Notice that 'Hello world!' is surrounded by quotes. That means it's a string, which is a just sequence of characters. A string is something we use to represent text in our code. This is the same thing as the text within your favorite book or the text on this very screen. 
+
+
+/* Notice that 'Hello world!' is surrounded by quotes. That means it's a string, which is a just sequence of characters. A string is something we use to represent text in our code. This is the same thing as the text within your favorite book or the text on this very screen. 
 
 In Javascript, we can represent strings with either double quotes " " or single quotes ' '—it doesn't matter which.
 Let's store 'Hello world!' by assigning it to the variable we call hi. Now hi's value is the string "Hello world!". */
@@ -23,7 +25,7 @@ Let's store 'Hello world!' by assigning it to the variable we call hi. Now hi's 
 var hi = ‘Hello world!’ 
 
 
-Variables are names for values. In Javascript, the = symbol assigns the value on the right to the name on the left. To create a variable, we must use the var keyword before typing the name of the variable. This tells Javascript that what we are making a new variable. The variable is created when a value is assigned to it. 
+/* Variables are names for values. In Javascript, the = symbol assigns the value on the right to the name on the left. To create a variable, we must use the var keyword before typing the name of the variable. This tells Javascript that what we are making a new variable. The variable is created when a value is assigned to it. 
 Note: Variable names cannot start with a digit and cannot contain spaces or most punctuation (except underscores _ ).
 To see the value of hi, we can print it:								     */
 
